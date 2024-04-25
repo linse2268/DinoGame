@@ -22,7 +22,6 @@ body{
 }
 
 h1{
-    text-align: center;
     position: relative;
     top: -60px;
     font-size: 7em;
@@ -31,10 +30,17 @@ h1{
     
 }
 
+h4{
+    font-size: 3em;
+    font-weight: 800;
+    color: rgba(255, 255, 255, 0.24);
+}
+
 #game{
-    height: 40vh;
-    width: 70vw;
-    border-radius: 2svb;
+    height: 300px;
+    width: 900px;
+    
+    border-radius: 10px;
     box-shadow: inset 0 0 20px black;
     background-color: rgb(71, 71, 71);
     z-index: 3;
@@ -42,14 +48,15 @@ h1{
 }
 
 #character{
-    width: 3vw;
-    height: 13vh;
+    width: 30px;
+    height: 80px;
     background-color: rgb(88, 139, 92);
-    border-radius: 1svb;
+    border-radius: 10px;
     position: relative;
-    top: 26vh;
-    left: 0.8vw;
+    top: 217px;
+    left: 10px;
     z-index: 2;
+    
 }
 
 .animate{
@@ -57,40 +64,97 @@ h1{
 }
 
 @keyframes jump{
-    0%{top: 26vh;}
-    30%{top: 15vh;}
-    70%{top: 15vh;}
-    100%{top: 26vh;}
+    0%{top: 217px;}
+    30%{top: 140px;}
+    70%{top: 140px;}
+    100%{top: 217px;}
 }
 
 #block{
-    width: 4vw;
-    height: 7vh;
-    border-radius: 1svb;
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
     background-color: rgba(255, 0, 0, 0.719);
     position: relative;
-    top: 19vh;
-    left: 75vw;
+    top: 178px;
+    left: 854px;
     z-index: 1;
-    animation: block 1.5s linear infinite;
+    animation:block 1.5s linear infinite ;
 }
 
 @keyframes block{
-    0%{left: 75vw;}
-    100%{left: -5vw;}
+    0%{left: 854px;}
+    100%{left: -10px;}
 }
 
 #restart{
 
-    width: 12vw;
-    aspect-ratio: 4/2;
+    width: 200px;
+    height: 80px;
     border: none;
-    border-radius: 2svb;
+    border-radius: 20px;
     background-color:  rgb(71, 71, 71);
     box-shadow: inset 0 0 15px black;
     position: relative;
     top: 50px;
     color: rgba(255, 255, 255, 0.24);
-    font-size: 3vw;
+    font-size: 3em;
     font-weight: 700;
+}
+
+
+@media (max-width:750px){
+
+    h1{
+        font-size: 2em;
+    }
+
+    #restart{
+
+        width: 90px;
+        height: 40px;
+        font-size: 1em;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.603);
+    }
+
+    h4{
+        font-size: 1.2em;
+        font-weight: 800;
+        color: rgba(255, 255, 255, 0.24);
+    }
+    #game{
+        height: 150px;
+        width: 400px;
+        overflow: hidden;
+    }
+
+    #character{
+        width: 15px;
+        height: 40px;
+        border-radius: 5px;
+        position: relative;
+        top: 105px;
+        left: 8px;
+    }
+
+    @keyframes jump{
+        0%{top: 105px;}
+        30%{top: 75px;}
+        70%{top: 75px;}
+        100%{top: 105px;}
+    }
+
+    #block{
+        width: 20px;
+        height: 20px;
+        border-radius: 2px;
+        position: relative;
+        top: 90px;
+        left: 100px;
+    }
+
+    @keyframes block{
+        0%{left: 390px;}
+        100%{left: -10px;}
+    }
 }
